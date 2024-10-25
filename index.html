@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contenu">
+    <section class="maison">
+        <div class="maison-contenu">
+            <h1>Quiz</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <button class="start">Commencer le quiz</button>
+        </div>
+    </section>
+    
+    <div class="quiz-contenu" id="quiz" style="display: none;">
+        <div class="question-section">
+            <div class="header-contenu">
+                <h3 id="question-number">Question 1/5</h3>
+                <div class="score-contenu">
+                    <div class="num">Score :</div>
+                    <div class="score" id="score">0</div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progress" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <div class="question" id="question-text"></div>
+        <div class="reponse-options" id="reponse-options">
+            <div class="reponse-option po1"></div>
+            <div class="reponse-option po2"></div>
+            <div class="reponse-option po3"></div>
+            <div class="reponse-option po4"></div>
+        </div>
+    </div>
+
+    <div id="final-score" style="display:none;">
+        <h2> 👍 Votre Score : </h2>
+        <p id="final-score-value"></p>
+        <p>🎉 Félicitations ! 🎉</p>
+        <button id="returnButton">Réessayer</button>
+    </div>
+    
+    
+
+    <div class="pop-up">
+        <h2>Guide du Quiz</h2>
+        <span class="info">1. Lorem ipsum, dolor sit amet consectetur.</span>
+        <span class="info">2. Lorem ipsum, dolor sit amet consectetur.</span>
+        <span class="info">3. Lorem ipsum, dolor sit amet consectetur adipisicing.</span>
+        <span class="info">4. Lorem ipsum, dolor sit amet consectetur.</span>
+        
+        <div class="btn-grp">
+            <button class="sortie1">Quitter le quiz</button>
+            <a href="#" class="sortie2">Continuer</a>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

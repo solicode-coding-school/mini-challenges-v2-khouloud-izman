@@ -1,0 +1,327 @@
+/* Style général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: black;
+}
+
+body {
+    background-image: url(img1.webp);  
+    background-size: cover;
+    color: white;
+    overflow: auto;
+}
+
+.contenu {
+    display: flex;
+
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Maison (l'interface d'accueil) */
+.maison {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.maison-contenu {
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.maison-contenu h1 {
+    font-size: 78px;
+    font-weight: 700;
+}
+
+.maison-contenu p {
+    font-size: 20px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.maison-contenu .start {
+    width: 190px;
+    height: 55px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background: pink;
+    font-size: 18px;
+    color: black;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.maison-contenu .start:hover {
+    background: rgb(248, 206, 248);
+}
+
+/* Pop-up */
+.pop-up {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background: white;
+    border-radius: 6px;
+    padding: 10px 25px;
+    color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.pop-up.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.pop-up h2 {
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.pop-up .info {
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 0;
+}
+
+.pop-up .btn-grp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid black;
+    margin-top: 10px;
+    padding: 15px 0 7px;
+}
+
+.pop-up .btn-grp .sortie1,
+.pop-up .btn-grp .sortie2 {
+    width: 130px;
+    height: 45px;
+    background: pink;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.pop-up .btn-grp .sortie1:hover{
+ background-color: rgb(248, 206, 248);}
+.pop-up .btn-grp .sortie2:hover{
+   background-color: rgb(248, 206, 248);
+}
+
+.quiz-contenu
+ {
+    background-color: rgb(249, 224, 228); /* Nouvelle couleur de fond */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: none; /* Suppression de l'ombre si vous voulez un aspect plus plat */
+    width: 100%; /* Pour occuper toute la largeur */
+    max-width: 100%; /* Pour occuper toute la largeur disponible */
+    /*  height: 100vh; /* Pour occuper toute la hauteur de la page */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer le contenu verticalement */
+    align-items: center; /* Centrer le contenu horizontalement */
+}
+
+
+.question-section {
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    margin-bottom: 20px;
+    width: 100%; /* Largeur totale pour un meilleur alignement */
+}
+.header-contenu
+ {
+    display: flex; /* Aligne le titre et le score côte à côte */
+    justify-content: space-between; /* Espace entre le titre et le score */
+    width: 100%; /* Largeur totale pour l'alignement */
+    align-items: center;
+    margin-bottom: -30px; /* Centre verticalement */
+}
+.progress-bar {
+    background-color: rgb(253, 227, 232); /* Arrière-plan gris clair */
+    border: 3px solid   rgb(208, 146, 157);
+    width: 24%; /* Largeur totale */
+    height: 30px; /* Hauteur de la barre de progression */
+    position: relative; /* Pour le positionnement de la progression */
+    bottom: 1px; /* Espace entre le titre et la barre de progression */
+}
+.progress {
+    background-color: rgb(208, 146, 157); /* Couleur de la progression */
+    height: 100%;
+    width: 30%; /* Hauteur totale du parent */
+    transition: width 0.3s; /* Transition fluide */
+}
+.score-contenu
+ {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5px; 
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.num {
+    margin-right: 10px; 
+}
+.score{
+    margin-right: 15px;
+    font-weight: 800px;
+    font-size: 50px;
+    color: rgb(208, 146, 157);
+}
+
+
+.reponse-options {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    display: inline-block;
+
+}
+
+
+.reponse-option {
+    background-color: white;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: bold; 
+    font-size: ;
+}
+
+.po1::before {
+    content: 'A';
+    background-color: rgb(105, 98, 99);
+    padding: 15px;
+    color: white;
+    width: 40px;
+    margin-right: 15px;
+}
+
+.po2::before {
+    content: 'B';
+    background-color: rgb(208, 146, 157);
+    padding: 15px;
+    color: white;
+    width: 40px;
+    margin-right: 15px;
+}
+
+.po3::before {
+    content: 'C';
+    background-color: rgb(208, 146, 157); 
+    padding: 15px;
+    color: white;
+    width: 40px;
+    margin-right: 15px;
+}
+
+.po4::before {
+    content: 'D';
+    background-color: rgb(208, 146, 157); 
+    padding: 15px;
+    color: white;
+    width: 40px;
+    margin-right: 15px;
+}
+
+.reponse-option.correct {
+    background-color: green; /* Couleur verte pour la bonne réponse */
+    color: white; /* Couleur du texte en blanc */
+}
+
+.reponse-option.incorrect {
+    background-color: red; /* Couleur rouge pour la mauvaise réponse */
+    color: white; /* Couleur du texte en blanc */
+}
+.score-section {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.question{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 30px;
+}
+#final-score {
+    background-color: rgba(255, 255, 255, 0.9); 
+    border: 2px solid black; 
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center; 
+    margin: 8% auto; 
+    width: 400px;
+    height: 400px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+#final-score h2 {
+    color:rgb(208, 146, 157); /* Couleur du titre */
+    font-size: 32px;    /* Taille de la police pour le titre */
+    margin-bottom: 30px; 
+    margin-top: 50px; 
+    justify-content: center;
+     align-items: center;/* Espace sous le titre */
+}
+
+#final-score p {
+    font-size: 24px;    /* Taille de police plus grande pour le score */
+    margin: 10px 0;
+    margin-top: 30px;  /* Espacement entre les paragraphes */
+}
+
+#final-score p#final-score-value {
+    font-weight: bold; /* Texte en gras pour le score */
+    font-size: 32px;    /* Taille de police plus grande pour le score */
+    color: black /* Couleur pour le score (vous pouvez choisir une autre couleur) */
+}
+
+#returnButton {
+    background: pink; 
+    color: white; 
+    border: 3px solid black; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 20px; 
+    cursor: pointer; 
+    margin-top: 40px;  
+}
+
+#returnButton:hover {
+ background-color: rgb(248, 206, 248);}
+
